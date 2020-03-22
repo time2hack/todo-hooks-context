@@ -11,6 +11,7 @@ export default ({ addTodo }) => {
       description: formData.get("description"),
       createdOn: new Date().toUTCString()
     });
+    e.target.reset();
   };
 
   return (
