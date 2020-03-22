@@ -16,19 +16,23 @@ export default ({ addTodo }) => {
 
   return (
     <form onSubmit={handleAdd}>
-      <div class="form-group">
+      <div className="form-group">
         <label htmlFor="text" className="text-muted">
           Task:
         </label>
-        <input name="text" type="text" id="text" class="form-control" />
+        <input name="text" type="text" id="text" className="form-control" />
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label htmlFor="description" className="text-muted">
           Description:
         </label>
-        <textarea name="description" id="description" class="form-control" />
+        <textarea
+          name="description"
+          id="description"
+          className="form-control"
+        />
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <button type="submit" className="btn btn-primary">
           Add
         </button>
