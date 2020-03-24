@@ -1,15 +1,11 @@
 import React from "react";
 
-export default () => (
+export default ({ app }) => (
   <header className="mb-3">
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">
-        <a className="navbar-brand" href="https://time2hack.com">
-          <img
-            src="https://res.cloudinary.com/time2hack/image/upload/q_auto:good/t2h-text-banner.png"
-            height="30"
-            alt="Time to Hack"
-          />
+        <a className="navbar-brand" href={app.url}>
+          <img src={app.logo} height="30" alt={app.title} />
         </a>
       </div>
     </nav>

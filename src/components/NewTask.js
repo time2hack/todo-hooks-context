@@ -9,7 +9,7 @@ export default ({ addTodo }) => {
     addTodo({
       text: formData.get("text"),
       description: formData.get("description"),
-      createdOn: new Date().toUTCString()
+      createdOn: +new Date()
     });
     e.target.reset();
   };
