@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Config from "../TodoContext";
+import { ConfigContext } from "../TodoContext";
 
 export const Todo = ({ task, ...extra }) => (
   <div className="card mb-3 bt-3" {...extra}>
@@ -13,8 +13,8 @@ export const Todo = ({ task, ...extra }) => (
   </div>
 );
 
-export default ({ tasks = [] }) => {
-  const conf = useContext(Config);
+export const ToDos = ({ tasks = [] }) => {
+  const conf = useContext(ConfigContext);
 
   return (
     <>

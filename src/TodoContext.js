@@ -1,6 +1,4 @@
 import React from "react";
 
-const Config = React.createContext({});
-Config.displayName = "Config";
-
-export default Config;
+export const ConfigContext = React.createContext({});
+ConfigContext.displayName = "Config";

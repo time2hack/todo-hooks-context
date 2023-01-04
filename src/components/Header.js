@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ app }) => (
+export const Header = ({ app }) => (
   <header className="mb-3">
     <nav className="navbar navbar-dark bg-dark">
       <div className="container">

@@ -1,7 +1,7 @@
 import React from "react";
 
-export default ({ addTodo }) => {
-  const handleAdd = e => {
+export const NewTask = ({ addTodo }) => {
+  const handleAdd = (e) => {
     e.preventDefault();
     // we need data from Form; for that we can use FormData API
     const formData = new FormData(e.target);
@@ -9,7 +9,7 @@ export default ({ addTodo }) => {
     addTodo({
       text: formData.get("text"),
       description: formData.get("description"),
-      createdOn: +new Date()
+      createdOn: +new Date(),
     });
     e.target.reset();
   };

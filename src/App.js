@@ -1,23 +1,23 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
-import ToDos from "./components/Todos";
-import NewTask from "./components/NewTask";
-import Config from "./TodoContext";
-import config from "./config";
-import _tasks from "./_initial";
+import { Header } from "./components/Header";
+import { ToDos } from "./components/Todos";
+import { NewTask } from "./components/NewTask";
+import { ConfigContext } from "./TodoContext";
+import { appConfig } from "./config";
+import { initialState } from "./_initial";
 
 const App = () => {
-  const [tasks, updateTasks] = useState(_tasks);
+  const [tasks, updateTasks] = useState(initialState);
 
   return (
-    <Config.Provider value={config}>
-      <Header app={config.app} />
+    <ConfigContext.Provider value={appConfig}>
+      <Header app={appConfig.app} />
       <div className="container">
-        <NewTask addTodo={task => updateTasks([...tasks, task])} />
+        <NewTask addTodo={(task) => updateTasks([...tasks, task])} />
         <hr />
         <ToDos tasks={tasks} />
       </div>
-    </Config.Provider>
+    </ConfigContext.Provider>
   );
 };
 
